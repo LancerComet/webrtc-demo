@@ -1,0 +1,22 @@
+{
+  "name": "webrtc.server",
+  "version": "1.0.0",
+  "description": "WebRTC Backend project",
+  "author": "LancerComet <chw644@hotmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon --exec 'ts-node' ./src/index.ts",
+    "prod": "cross-env NODE_ENV=production ts-node ./src/index.ts"
+  },
+  "dependencies": {
+    "@types/node": "^8.5.7",
+    "@types/socket.io": "^1.4.31",
+    "cross-env": "^5.1.3",
+    "socket.io": "^2.0.4",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.8"
+  }
+}
