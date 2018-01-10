@@ -8,7 +8,7 @@ const isDev = process.env.NODE_ENV === 'development'
 
 // 创建 http 服务器.
 const httpServer = createHttpServer({
-  corsOrigin: isDev && 'http://localhost:8080'
+  corsOrigin: isDev
 })
 
 // 创建 WebSocket 服务器，用于充当 Signaling 服务器.

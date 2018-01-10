@@ -7,11 +7,11 @@ html
     div#webrtc-app
       div.master-panel
         h2 Master
-        video#master-video.stream-video(width="480", height="272", controls="controls")
+        video#master-video.stream-video(width="480", height="272")
         div
-          button#start-master-video Start Master Video
-          button#end-master-video End Master Video
+          button#start-remote-calling-btn Start Remote Calling
+          button#end-remote-calling-btn End Remote Calling
 
-      div.client-panel
-        h2 Client
-        video#client-video.stream-video(width="480", height="272", controls="controls")
+      div.guest-panel
+        h2 Guest
+        video#guest-video.stream-video(width="480", height="272")

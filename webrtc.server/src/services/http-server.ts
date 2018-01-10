@@ -3,15 +3,14 @@ import * as http from 'http'
 /**
  * 创建 http 服务器.
  *
- * @param {any} { corsOrigin = '' }
+ * @param {any} { corsOrigin = false }
  * @returns {http.Server}
  */
-function createHttpServer ({ corsOrigin = '' }): http.Server {
+function createHttpServer ({ corsOrigin = false }): http.Server {
   // 创建 Http 服务器来响应 WebSocket 握手.
   const httpServer = http.createServer((req, res) => {
-    // 在开发环境下允许跨域请求，方便调试.
     if (corsOrigin) {
-      res.setHeader('Access-Control-Allow-Origin', corsOrigin)
+      res.setHeader('Access-Control-Allow-Origin', req.headers.host)
       res.setHeader('Access-Control-Request-Method', '*')
       res.setHeader('Access-Control-Allow-Methods', '*')
       res.setHeader('Access-Control-Allow-Headers', '*')
