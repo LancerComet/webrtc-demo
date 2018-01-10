@@ -29,8 +29,7 @@ function createSignalingServer (option: ICreateSignalingServer): SocketIO.Server
  */
 function initSignalingServer (io: SocketIO.Server) {
   io.on('connection', function (socket) {
-    console.log('A new user is on.')
-    socket.emit('greeting', 'Hello!')
+    socket.emit('connected', socket.id)
   })
 }
 

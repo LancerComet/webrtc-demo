@@ -3,16 +3,15 @@ html
     meta(charset="utf-8")
     title #{APPNAME}
 
-    //- Would turn it on if it was set to false.
-    if INJECT === false
-      each css in htmlWebpackPlugin.files.css
-        link(href="#{css}", rel="stylesheet")
-
   body
     div#webrtc-app
+      div.master-panel
+        h2 Master
+        video#master-video.stream-video(width="480", height="272", controls="controls")
+        div
+          button#start-master-video Start Master Video
+          button#end-master-video End Master Video
 
-    //- Would turn it on if it was set to false.
-    if INJECT === false
-      div.script-requirement
-        each chunk in htmlWebpackPlugin.files.chunks
-          script(src="#{chunk.entry}")
+      div.client-panel
+        h2 Client
+        video#client-video.stream-video(width="480", height="272", controls="controls")

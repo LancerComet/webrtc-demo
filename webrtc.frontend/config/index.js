@@ -15,7 +15,7 @@ exports.base = {
   template: projectRoot + '/src/index.jade',  // Temmplate entry.
 
   // Setup HtmlWebpackPlugin injection mode.
-  inject: false
+  inject: true
 }
 
 exports.dev = {

@@ -1,6 +1,6 @@
-import * as io from 'socket.io-client'
+import './modules/rtc-polyfill'
 
-const socket = io.connect('http://localhost:3000')
-socket.on('greeting', function (data) {
-  console.log(data);
-})
+import './services/signal.master'
+import './services/signal.guest'
+import './index.styl'
+
